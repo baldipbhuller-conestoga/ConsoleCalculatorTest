@@ -206,6 +206,7 @@ namespace ConsoleCalculatorTest
 
         }
 
+        [Test]
         public void Division_WithZeroDividend()
         {
             // Arrange
