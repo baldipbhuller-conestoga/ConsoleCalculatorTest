@@ -6,6 +6,8 @@ namespace ConsoleCalculatorTest
     [TestFixture]
     public class CalculatorTests
     {
+        // Baldip Singh Bhuller
+
         [Test]
         public void Basic_Addition_of_Two_Numbers()
         {
