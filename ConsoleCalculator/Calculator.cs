@@ -92,7 +92,7 @@ namespace ConsoleCalculator
             }
 
             //Show result
-            Console.Write("Result: {0}", result);
+            Console.WriteLine("Result: {0}", result);
         }
 
         public static void Main(string[] args)
