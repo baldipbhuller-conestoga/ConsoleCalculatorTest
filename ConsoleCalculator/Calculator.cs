@@ -4,48 +4,48 @@ namespace ConsoleCalculator
 {
     // Baldip Singh Bhuller
 
-    public class ConsoleCalculator
+    public class Calculator
     {
-        private decimal firstNumber;
-        private decimal secondNumber;
+        private double firstNumber;
+        private double secondNumber;
 
-        public ConsoleCalculator()
+        public Calculator()
         {
             FirstNumber = 1;
             SecondNumber = 1;
         }
 
-        public decimal FirstNumber { get => firstNumber; set => firstNumber = value; }
-        public decimal SecondNumber { get => secondNumber; set => secondNumber = value; }
+        public double FirstNumber { get => firstNumber; set => firstNumber = value; }
+        public double SecondNumber { get => secondNumber; set => secondNumber = value; }
 
         // Addition method rounded to 3 decimal places
-        public decimal Addition(decimal firstNumber, decimal secondNumber)
+        public double Addition()
         {
-            return Math.Round(firstNumber + secondNumber, 3);
+            return Math.Round(FirstNumber + SecondNumber, 3);
         }
 
         // Subtraction method rounded to 3 decimal places
-        public decimal Subtraction(decimal firstNumber, decimal secondNumber)
+        public double Subtraction()
         {
-            return Math.Round(firstNumber - secondNumber, 3);
+            return Math.Round(FirstNumber - SecondNumber, 3);
         }
 
         // Multiplication method rounded to 3 decimal places
-        public decimal Multiplication(decimal firstNumber, decimal secondNumber)
+        public double Multiplication()
         {
-            return Math.Round(firstNumber * secondNumber, 3);
+            return Math.Round(FirstNumber * SecondNumber, 3);
         }
 
         // Division method rounded to 3 decimal places
-        public decimal Division(decimal firstNumber, decimal secondNumber)
+        public double Division()
         {
-            return Math.Round(firstNumber / secondNumber, 3);
+            return Math.Round(FirstNumber / SecondNumber, 3);
         }
 
         public static void RunConsoleView()
         {
             string operationInput, firstNumber, secondNumber;
-            decimal result;
+            double result;
 
             Console.WriteLine("Console Calculator");
             Console.Write("Choose operation: \n" +
@@ -58,32 +58,32 @@ namespace ConsoleCalculator
             //Get input operation
             operationInput = Console.ReadLine();
 
-            ConsoleCalculator consoleCalculator = new ConsoleCalculator();
+            Calculator consoleCalculator = new Calculator();
 
-            //Get input first number
+            //Get and set input first number
             Console.Write("Enter first number:");
             firstNumber = Console.ReadLine();
-            consoleCalculator.FirstNumber = decimal.Parse(firstNumber);
+            consoleCalculator.FirstNumber = double.Parse(firstNumber);
 
-            //Get input second number
+            //Get and set input second number
             Console.Write("Enter second number:");
             secondNumber = Console.ReadLine();
-            consoleCalculator.SecondNumber = decimal.Parse(secondNumber);
+            consoleCalculator.SecondNumber = double.Parse(secondNumber);
 
             //Check operation
             switch (operationInput)
             {
                 case "+": 
-                    result = consoleCalculator.Addition(consoleCalculator.FirstNumber, consoleCalculator.SecondNumber);
+                    result = consoleCalculator.Addition();
                     break;
                 case "-":
-                    result = consoleCalculator.Subtraction(consoleCalculator.FirstNumber, consoleCalculator.SecondNumber);
+                    result = consoleCalculator.Subtraction();
                     break;
                 case "*":
-                    result = consoleCalculator.Multiplication(consoleCalculator.FirstNumber, consoleCalculator.SecondNumber);
+                    result = consoleCalculator.Multiplication();
                     break;
                 case "/":
-                    result = consoleCalculator.Division(consoleCalculator.FirstNumber, consoleCalculator.SecondNumber);
+                    result = consoleCalculator.Division();
                     break;
                 default:
                     Console.WriteLine("Incorrect operation input");
