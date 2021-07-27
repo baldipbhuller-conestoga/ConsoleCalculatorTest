@@ -224,5 +224,59 @@ namespace ConsoleCalculatorTest
             Assert.AreEqual(expectedResult, actualResult);
 
         }
+
+        [Test]
+        public void Basic_Division_of_Two_Numbers_1and3()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            calculator.FirstNumber = 1;
+            calculator.SecondNumber = 3;
+
+            double expectedResult = 0.333;
+
+            // Act
+            double actualResult = calculator.Division();
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
+
+        [Test]
+        public void Basic_Division_of_Two_Numbers_2and1()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            calculator.FirstNumber = 2;
+            calculator.SecondNumber = 1;
+
+            double expectedResult = 2;
+
+            // Act
+            double actualResult = calculator.Division();
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
+
+        [Test]
+        public void Basic_Division_of_Two_Numbers_9and3()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+            calculator.FirstNumber = 9;
+            calculator.SecondNumber = 3;
+
+            double expectedResult = 3;
+
+            // Act
+            double actualResult = calculator.Division();
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
     }
 }
