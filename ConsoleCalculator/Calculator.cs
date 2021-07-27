@@ -39,7 +39,7 @@ namespace ConsoleCalculator
         // Division method rounded to 3 decimal places
         public double Division()
         {
-            return Math.Round(FirstNumber / SecondNumber, 3);
+            return Math.Round(FirstNumber * SecondNumber, 3);
         }
 
         public static void RunConsoleView()
